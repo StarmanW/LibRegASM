@@ -6,9 +6,9 @@
     ;------------------------------------------------------------------------------------------------------------------------------------------;
 	;Data structure for login string input
     login_KB_INPUT	        LABEL	BYTE            ;Parameter list name
-    login_MAX_LEN	        DB	    10		        ;Max no of chars
-    login_ACT_LEN	        DB	    ?		        ;Actual no of chars
-    login_KB_DATA	        DB	    10 DUP(' ')     ;Data area to store
+    login_MAX_LEN	        DB	10		;Max no of chars
+    login_ACT_LEN	        DB	?		;Actual no of chars
+    login_KB_DATA	        DB	10 DUP(' ')     ;Data area to store
 
 	;All the login variables
     loginHeader             DB      "-------------------------",13,10,"|         LOGIN         |",13,10,"-------------------------$"
@@ -49,21 +49,21 @@
     ;------------------------------------------------------------------------------------------------------------------------------------------;
 	;Data structure for new librarian name string input
     newLibName_KB_INPUT	    LABEL	BYTE            ;Parameter list name
-    newLibName_MAX_LEN	    DB	    20		        ;Max no of chars
-    newLibName_ACT_LEN	    DB	    ?		        ;Actual no of chars
-    newLibName_KB_DATA	    DB	    20 DUP(' ')     ;Data area to store 
+    newLibName_MAX_LEN	    DB	    	20		;Max no of chars
+    newLibName_ACT_LEN	    DB	    	?		;Actual no of chars
+    newLibName_KB_DATA	    DB	    	20 DUP(' ')     ;Data area to store 
     
 	;Data structure for new librarian ID string input
     newLibID_KB_INPUT	    LABEL	BYTE            ;Parameter list name
-    newLibID_MAX_LEN	    DB	    7		        ;Max no of chars
-    newLibID_ACT_LEN	    DB	    ?		        ;Actual no of chars
-    newLibID_KB_DATA	    DB	    7 DUP(' ')      ;Data area to store
+    newLibID_MAX_LEN	    DB	    	7		;Max no of chars
+    newLibID_ACT_LEN	    DB	    	?		;Actual no of chars
+    newLibID_KB_DATA	    DB	    	7 DUP(' ')      ;Data area to store
     
 	;Data structure for date joined string input
     dateJoined_KB_INPUT	    LABEL	BYTE            ;Parameter list name
-    dateJoined_MAX_LEN	    DB	    11		        ;Max no of chars
-    dateJoined_ACT_LEN	    DB	    ?		        ;Actual no of chars
-    dateJoined_KB_DATA	    DB	    11 DUP(' ')     ;Data area to store
+    dateJoined_MAX_LEN	    DB	   	11		;Max no of chars
+    dateJoined_ACT_LEN	    DB	    	?		;Actual no of chars
+    dateJoined_KB_DATA	    DB	    	11 DUP(' ')     ;Data area to store
     
     newLibHeader            DB      13,"----------------------------------------------------------------",13,10,"|                         New Librarian                        |",13,10,"----------------------------------------------------------------$"        
     newLibNameMsg           DB      13,10,"Enter new librarian name (e.g. John Smith): $"
@@ -91,7 +91,7 @@ MAIN PROC FAR
 
     ;START DISPLAY THE MAIN MENU     
 start:  
-        CALL clearScreen     				;Call clearScreen to clear the screen after login
+	CALL clearScreen		    ;Call clearScreen to clear the screen after login
         LEA DX,main_menu                    ;LEA main menu into DX to display
         CALL displayString                  ;Call the display string procedure to display the main menu
     
