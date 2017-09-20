@@ -1,7 +1,7 @@
 '''
 	This is a mock-up of CSA
     	Date: 14 July 2017
-	Version: 20-SEP-2017
+	Version2: 20-SEP-2017
 '''
 
 # import sys and time - sys for flush, time for delay
